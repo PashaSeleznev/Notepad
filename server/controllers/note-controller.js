@@ -1,5 +1,6 @@
 const Note = require('../models/Note')
 
+// Получение всех заметок
 const getNotes = (req, res) => {
     Note.find()
         .then(data => {
@@ -11,6 +12,7 @@ const getNotes = (req, res) => {
           });
 }
 
+// Добавление новой заметки
 const addNote = async (req, res) => {
     try {
       if (req.body) {
@@ -34,6 +36,7 @@ const addNote = async (req, res) => {
     }
   }
 
+  // Удаление заметки
   const deleteNote = async (req, res) => {
     try {
       const { id } = req.params
@@ -45,6 +48,7 @@ const addNote = async (req, res) => {
     }
   }
 
+  // Редактирование заметки
   const editNote = async (req, res) => {
     console.log("req.body:", req.body);
     try {

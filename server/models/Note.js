@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+// Описание структуры заметки в MongoDB
 const noteSchema = new Schema({
     title: {
         type: String,

@@ -14,6 +14,7 @@ const storage = multer.diskStorage({
 
 const types = ['image/png', 'image/jpg', 'image/jpeg']
 
+// Пишем фильтр для формата загружаемого файла
 const fileFilter = (req, file, callback) => {
     if (types.includes(file.mimetype)) {
         callback(null, true)

@@ -137,7 +137,14 @@ const FullNote: FC<FullNoteProps> = ({ note, onBack, fetchNotes, updateSelectedN
                 className="note-details-img"
               />
             )}
-            <button className="edit-btn" onClick={() => {setIsEditing(true); setEditNote(note)}}>Редактировать</button>
+            <button 
+              className="edit-btn" 
+              onClick={() => {
+                setIsEditing(true) 
+                setEditNote(note)
+                }}>
+                Редактировать
+            </button>
           </div>
         )}
         </div>
